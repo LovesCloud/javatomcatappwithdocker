@@ -39,7 +39,7 @@ node{
   
    stage('Pull Docker Image and Deploy'){        
          
-            def dockerContainerName = 'docker-pipeline-$BUILD_NUMBER'
+            def dockerContainerName = 'docker-$JOB_NAME-$BUILD_NUMBER'
             def dockerRun= "sudo docker run -p 8080:8080 -d --name ${dockerContainerName} rajnikhattarrsinha/tomcatdocker09:2.0.0"         
            //sshagent(['dockerdeployserver2']) {
         // sshagent(['dockergcpserver']) {
