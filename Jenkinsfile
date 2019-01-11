@@ -26,17 +26,7 @@ node{
         sh 'docker push rajnikhattarrsinha/tomcatdocker09:2.0.0'
       }
 
-       stage('Stop running containers'){        
-       //def listContainer='sudo docker ps'
-       def scriptRunner='sudo ./stopscript.sh'
-       // def stopContainer='sudo docker stop $(docker ps -a -q)'
-      // sshagent(['dockerdeployserver2']) {
-       sshagent(['tomcatdeploymentserver']) {             
-       // sshagent(['dockergcpserver']) {
-              sh "ssh -o StrictHostKeyChecking=no rajni@35.227.106.13 ${scriptRunner}"            
-         }
-    } 
-  
+         
    stage('Ansible'){      
          stage('ansible'){
         ansiblePlaybook credentialsId: 'tomcatdeploymentserver', disableHostKeyChecking: true, installation: 'ansible 2.7.5', playbook: '${WORKSPACE}/deploy.yml'
