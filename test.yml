@@ -1,1 +1,7 @@
-test file
+-
+ name: Test connectivity to target servers
+ hosts: deploy
+ #Use webservers as ansilbe client group
+ tasks:
+   - name: Ping test
+     ping:
