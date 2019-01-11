@@ -2,7 +2,7 @@
   hosts: dockerhost
 
   tasks:
- - name: pull
-   docker_image:
-     name: rajnikhattarrsinha/tomcatdocker09:2.0.0
-     state: present
+  - name: pull
+    docker_image:
+      name: rajnikhattarrsinha/tomcatdocker09:2.0.0
+      state: present
