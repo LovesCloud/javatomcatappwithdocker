@@ -1,7 +1,7 @@
 - name: Pull ubuntu image
   hosts: dockerhost
-#   remote_user: ubuntu
- tasks:
+
+  tasks:
  - name: pull
    docker_image:
      name: rajnikhattarrsinha/tomcatdocker09:2.0.0
