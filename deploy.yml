@@ -1,5 +1,5 @@
 - name: Pull ubuntu image
- hosts: dockerhost
+  hosts: dockerhost
 #   remote_user: ubuntu
  tasks:
  - name: pull
