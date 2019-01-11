@@ -27,10 +27,10 @@ node{
       }
 
          
-   stage('Ansible'){      
-         stage('ansible'){
+   stage('Tomcat Deploy using Ansible'){      
+        
         ansiblePlaybook credentialsId: 'tomcatdeploymentserver', disableHostKeyChecking: true, installation: 'ansible 2.7.5', playbook: '${WORKSPACE}/deploy.yml'
-      }      
+          
          
    }
  }
