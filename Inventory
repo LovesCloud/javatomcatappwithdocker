@@ -1,0 +1,2 @@
+[dockerhost]
+deploy ansible_host=35.237.148.63  ansible_connection=ssh ansible_user=deploy ansible_password=deploy
