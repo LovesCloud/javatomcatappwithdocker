@@ -1,6 +1,6 @@
 -
  name: Test connectivity to target servers
- hosts: deploy
+ hosts: dockerhost
  #Use webservers as ansilbe client group
  tasks:
    - name: Ping test
