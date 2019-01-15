@@ -30,7 +30,7 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>java-tomcat-maven-example-ansibledocker1509</finalName>
+    <finalName>java-tomcat-maven-example-ansibledocker15012019</finalName>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
