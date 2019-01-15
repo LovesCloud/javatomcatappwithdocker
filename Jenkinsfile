@@ -16,14 +16,14 @@ node{
       }  
       
     stage('Build Docker Image'){
-         sh 'docker build -t rajnikhattarrsinha/tomcatdocker09:2.0.0 .'
+         sh 'docker build -t rajnikhattarrsinha/ansibledocker15:2.0.0 .'
       }  
    
       stage('Publish Docker Image'){
          withCredentials([string(credentialsId: 'dockerpwd', variable: 'dockerPWD')]) {
               sh "docker login -u rajnikhattarrsinha -p ${dockerPWD}"
          }
-        sh 'docker push rajnikhattarrsinha/tomcatdocker09:2.0.0'
+        sh 'docker push rajnikhattarrsinha/ansibledocker15:2.0.0'
       }
 
          
