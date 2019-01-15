@@ -1,0 +1,17 @@
+- name: Pull Docker image
+  hosts: dockerhost
+  tasks:
+  - name: pull
+    docker_image:
+      name: rajnikhattarrsinha/tomcatdocker09:2.0.0
+      state: present
+  tasks:
+  - name: web container
+    docker_container:
+      name: web-Jan
+      image: rajnikhattarrsinha/tomcatdocker09:2.0.0
+      state: started
+      ports:
+      - "8080:8080"
+      tty: true
+      detach: true
