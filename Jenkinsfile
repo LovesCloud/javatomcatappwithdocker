@@ -26,12 +26,12 @@ node{
         sh 'docker push rajnikhattarrsinha/ansibledocker1501:2.0.0'
       }
       
-      stage('Stop running containers'){        
-       def scriptRunner='sudo ./stopscript.sh'
-       sshagent(['tomcatdeploymentserver']) {             
-            sh "ssh -o StrictHostKeyChecking=no rajni@35.231.110.75 ${scriptRunner}"            
-         }
-    } 
+     // stage('Stop running containers'){        
+      // def scriptRunner='sudo ./stopscript.sh'
+      // sshagent(['tomcatdeploymentserver']) {             
+          //  sh "ssh -o StrictHostKeyChecking=no rajni@35.231.110.75 ${scriptRunner}"            
+        // }
+  //  } 
 
          
    stage('Tomcat Deploy using Ansible'){      
