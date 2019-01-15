@@ -3,13 +3,13 @@
   tasks:
   - name: pull
     docker_image:
-      name: rajnikhattarrsinha/ansibledocker1501:2.0.0
+      name: rajnikhattarrsinha/ansibledocker1501:3.0.0
       state: present
   tasks:
   - name: web container
     docker_container:
       name: web-Jan
-      image: rajnikhattarrsinha/ansibledocker1501:2.0.0
+      image: rajnikhattarrsinha/ansibledocker1501:3.0.0
       state: started
       ports:
       - "8080:8080"
